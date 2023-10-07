@@ -1,0 +1,141 @@
+﻿html {
+    height: 100% !important;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    height: inherit;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select{
+    max-width: 280px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: #777;
+    border-color: #fff
+}
+
+#mainchatcontiner {
+    align-self: center;
+    padding: 10px;
+    height: 90%;
+}
+
+#parentchatdiv, .parentchatdiv {
+    border-radius: 10px;
+    border: 1px solid #b7bfac;
+    padding: 20px;
+    width: 60%;
+    min-height: 80%;
+    max-height: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 10px;
+    background-color: #e8f5f5;
+}
+#citations {
+    border-radius: 10px;
+    border: 1px solid #b7bfac;
+    padding: 20px;
+    width: 40%;
+    min-height: 80%;
+    max-height: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #a7e1fd;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #0396f9;
+    border-radius: 10px;
+    border: 2px solid #ffc800;
+}
+
+#summary {
+    width: 100%;
+    border: 0px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#textdiv {
+    width: 60%;
+    margin-top: 10px;
+    display: flex;
+    padding-left: 15%;
+}
+
+#qnatextbox {
+    border: 1px solid #b7bfac;
+    padding: 10px;
+    width: 80%;
+    height: 50px;
+    display: inline-block;
+}
+
+#SendMessage {
+    height: 50px;
+    display: inline-block;
+    margin-left: 10px;
+    font-variant-caps: small-caps;
+}
+
+.oai_chat {
+    padding: 10px;
+    border: 1px solid #b4c9eb;
+    border-radius: 10px;
+    background-color: #f2f7ff;
+    width: 50%;
+    /*max-width: 50%;*/
+    /*min-height: 100px;*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.user_chat {
+    padding: 10px;
+    border: 1px solid #bfbfc5;
+    border-radius: 10px;
+    background-color: rgb(231 231 235 / 50%);
+    max-width: 50%;
+    /*height: 100px;*/
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin-right: 40px;
+    margin-left: auto;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: flex;
+    height: 90%;
+    margin-right: 0px;
+}

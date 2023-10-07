@@ -1,0 +1,579 @@
+{
+  "variables": [
+    {
+      "key": "apiKey",
+      "value": "KGgI4sYzVetWGMZLa19yssYazURdT8bZAp5qPNrtOsAzSeB9XaT4"
+    },
+    {
+      "key": "apiVersion",
+      "value": "2020-06-30"
+    },
+    {
+      "key": "serviceName",
+      "value": "cloudops-language-service"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://cloudops-language-service.search.windows.net"
+    }
+  ],
+  "info": {
+    "name": "Azure Cognitive Search | cloudops-language-service ",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Indexes",
+      "item": [
+        {
+          "name": "Analyze Text",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}/analyze?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/test-analyzer)"
+          }
+        },
+        {
+          "name": "Create Index",
+          "request": {
+            "url": "{{baseUrl}}/indexes?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/create-index)"
+          }
+        },
+        {
+          "name": "List Indexes",
+          "request": {
+            "url": "{{baseUrl}}/indexes?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/list-indexes)"
+          }
+        },
+        {
+          "name": "Delete Index",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}?api-version={{apiVersion}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/delete-index)"
+          }
+        },
+        {
+          "name": "Get Index",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/get-index)"
+          }
+        },
+        {
+          "name": "Update Index",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}?api-version={{apiVersion}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/update-index)"
+          }
+        },
+        {
+          "name": "Get Index Statistics",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}/stats?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/get-index-statistics)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Documents",
+      "item": [
+        {
+          "name": "Add, Update or Delete Documents",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}/docs/index?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/addupdate-or-delete-documents)"
+          }
+        },
+        {
+          "name": "Autocomplete",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}/docs/autocomplete?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/autocomplete)"
+          }
+        },
+        {
+          "name": "Count Documents",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}/docs/$count?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/count-documents)"
+          }
+        },
+        {
+          "name": "Lookup Document",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}/docs/key?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/lookup-document)"
+          }
+        },
+        {
+          "name": "Search Documents",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}/docs/search?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/search-documents)"
+          }
+        },
+        {
+          "name": "Suggestions",
+          "request": {
+            "url": "{{baseUrl}}/indexes/{{indexName}}/docs/suggest?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/suggestions)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Service ",
+      "item": [
+        {
+          "name": "Service Statistics",
+          "request": {
+            "url": "{{baseUrl}}/servicestats?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/get-service-statistics)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Indexer",
+      "item": [
+        {
+          "name": "Create Indexer",
+          "request": {
+            "url": "{{baseUrl}}/indexers?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/create-indexer)"
+          }
+        },
+        {
+          "name": "Get Indexer",
+          "request": {
+            "url": "{{baseUrl}}/indexers/{{indexerName}}?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/get-indexer)"
+          }
+        },
+        {
+          "name": "Get Indexer Status",
+          "request": {
+            "url": "{{baseUrl}}/indexers/{{indexerName}}/status?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/get-indexer-status)"
+          }
+        },
+        {
+          "name": "Update Indexer",
+          "request": {
+            "url": "{{baseUrl}}/indexers/{{indexerName}}?api-version={{apiVersion}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/update-data-source)"
+          }
+        },
+        {
+          "name": "Reset Indexer",
+          "request": {
+            "url": "{{baseUrl}}/indexers/{{indexerName}}/reset?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/reset-indexer)"
+          }
+        },
+        {
+          "name": "Run Indexer",
+          "request": {
+            "url": "{{baseUrl}}/indexers/{{indexerName}}/run?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/run-indexer)"
+          }
+        },
+        {
+          "name": "List Indexers",
+          "request": {
+            "url": "{{baseUrl}}/indexers?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/list-indexers)"
+          }
+        },
+        {
+          "name": "Delete Indexer",
+          "request": {
+            "url": "{{baseUrl}}/indexers/{{indexerName}}?api-version={{apiVersion}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/create-indexer)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Data Source",
+      "item": [
+        {
+          "name": "Create Data Source",
+          "request": {
+            "url": "{{baseUrl}}/datasources?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/create-data-source)"
+          }
+        },
+        {
+          "name": "Get Data Source",
+          "request": {
+            "url": "{{baseUrl}}/datasources/{{dataSourceName}}?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/get-data-source)"
+          }
+        },
+        {
+          "name": "Update Data Source",
+          "request": {
+            "url": "{{baseUrl}}/datasources/{{dataSourceName}}?api-version={{apiVersion}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/update-data-source)"
+          }
+        },
+        {
+          "name": "List Data Sources",
+          "request": {
+            "url": "{{baseUrl}}/datasources?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/list-data-sources)"
+          }
+        },
+        {
+          "name": "Delete Data Source",
+          "request": {
+            "url": "{{baseUrl}}/datasources/{{dataSourceName}}?api-version={{apiVersion}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/delete-data-source)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Skillset",
+      "item": [
+        {
+          "name": "Create Skillset",
+          "request": {
+            "url": "{{baseUrl}}/skillsets?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/create-skillset)"
+          }
+        },
+        {
+          "name": "Update Skillset",
+          "request": {
+            "url": "{{baseUrl}}/skillsets/{{skillSetName}}?api-version={{apiVersion}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/update-skillset)"
+          }
+        },
+        {
+          "name": "Delete Skillset",
+          "request": {
+            "url": "{{baseUrl}}/skillsets/{{skillSetName}}?api-version={{apiVersion}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/delete-skillset)"
+          }
+        },
+        {
+          "name": "Get Skillset",
+          "request": {
+            "url": "{{baseUrl}}/skillsets/{{skillSetName}}?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/get-skillset)"
+          }
+        },
+        {
+          "name": "List Skillsets",
+          "request": {
+            "url": "{{baseUrl}}/skillsets?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/list-skillset)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Synonyms",
+      "item": [
+        {
+          "name": "Create Synonym Map ",
+          "request": {
+            "url": "{{baseUrl}}/synonymmaps?api-version={{apiVersion}}",
+            "method": "POST",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/create-synonym-map)"
+          }
+        },
+        {
+          "name": "Update Synonym Map",
+          "request": {
+            "url": "{{baseUrl}}/synonymmaps/{{synonymMapName}}?api-version={{apiVersion}}",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[https://docs.microsoft.com/rest/api/searchservice/update-synonym-map)"
+          }
+        },
+        {
+          "name": "Delete Synonym Map",
+          "request": {
+            "url": "{{baseUrl}}/synonymmaps/{{synonymMapName}}?api-version={{apiVersion}}",
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/delete-synonym-map)"
+          }
+        },
+        {
+          "name": "Get Synonym Map",
+          "request": {
+            "url": "{{baseUrl}}/synonymmaps/{{synonymMapName}}?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/get-synonym-map)"
+          }
+        },
+        {
+          "name": "List Synonym Maps",
+          "request": {
+            "url": "{{baseUrl}}/synonymmaps?api-version={{apiVersion}}",
+            "method": "GET",
+            "header": [
+              {
+                "key": "api-key",
+                "value": "{{apiKey}}"
+              }
+            ],
+            "description": "[API documentation](https://docs.microsoft.com/rest/api/searchservice/list-synonym-maps)"
+          }
+        }
+      ]
+    }
+  ]
+}
